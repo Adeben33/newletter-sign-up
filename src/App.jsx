@@ -1,7 +1,19 @@
 import { useState } from "react";
 import "./App.css";
+import isEmail from "validator/lib/isEmail";
 
 function App() {
+  const [emailError, setEmailError] = useState(false);
+
+  const validateEmail = (e) => {
+    var email = e.target.value;
+    if (isEmail(email)) {
+      // Correct usage of isEmail
+      setEmailError(false); // If the email is valid, we do not want to show an error
+    } else {
+      setEmailError(true); // If the email is invalid, set error to true
+    }
+  };
   return (
     <main>
       <div className="container">
@@ -67,16 +79,23 @@ function App() {
         </ul>
         <form className="form">
           <label htmlFor="email" className="label">
-            Email address
+            Email address{" "}
+            {emailError ? (
+              <span className="error"> Valid email required</span>
+            ) : (
+              ""
+            )}
           </label>
           <input
             type="email"
             id="email"
             name="email"
+            onChange={validateEmail}
             placeholder="email@company.com"
+            className={emailError ? "error-box" : ""}
           />
+          <input type="button" value="Subscribe to monthly newletter" />
         </form>
-        <button type="button">Subscribe to monthly newletter</button>
       </div>
       <div className="image"></div>
     </main>
