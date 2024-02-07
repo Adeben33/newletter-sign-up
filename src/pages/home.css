@@ -55,7 +55,7 @@ main .container ul li {
 .image {
   height: 593px;
   width: 400px;
-  background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+  background-image: url(./../assets/images/illustration-sign-up-desktop.svg);
   background-size: cover;
   background-position: center;
   border-radius: 16px;
@@ -99,7 +99,6 @@ input[type="email"]::placeholder {
   font-size: 16px;
   color: hsl(231, 7%, 60%);
 }
-
 input[type="submit"] {
   width: 100%;
   font-size: 18px;
@@ -112,11 +111,9 @@ input[type="submit"] {
   cursor: pointer;
   transition: all 0.2s;
 }
-
 input[type="submit"]:active {
   background-color: hsl(4, 100%, 67%);
 }
-
 form .error-box {
   border: 1px solid #ff6155;
   background-color: rgba(255, 97, 85, 0.15);

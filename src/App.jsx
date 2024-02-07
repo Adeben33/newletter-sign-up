@@ -5,7 +5,8 @@ import Success from "./pages/Success";
 function App() {
   return (
     <BrowserRouter>
-      <Routes path="/" element={<Home />}>
+      <Routes path="/">
+        <Route index element={<Home />} />
         <Route path="success" element={<Success />} />
       </Routes>
     </BrowserRouter>

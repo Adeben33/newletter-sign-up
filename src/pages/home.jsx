@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./Home.css";
 import isEmail from "validator/lib/isEmail";
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [emailError, setEmailError] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [email, setEmail] = useState("");
+  const navigate = useNavigate();
 
   const validateEmail = (email) => {
     return isEmail(email);
@@ -16,6 +18,7 @@ function Home() {
     setSubmitted(true);
     if (validateEmail(email)) {
       setEmailError(false);
+      navigate("/success");
     } else {
       setEmailError(true);
     }
