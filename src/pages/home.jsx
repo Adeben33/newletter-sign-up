@@ -1,8 +1,6 @@
 import { useState } from "react";
-import "./App.css";
+import "./Home.css";
 import isEmail from "validator/lib/isEmail";
-
-import { useHistory } from "react-router-dom";
 
 function Home() {
   const [emailError, setEmailError] = useState(false);
@@ -116,4 +114,4 @@ function Home() {
   );
 }
 
-export default App;
+export default Home;
