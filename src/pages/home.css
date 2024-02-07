@@ -9,11 +9,10 @@
 }
 
 main {
-  margin: 10 0 10 0;
   width: 860px;
   display: flex;
   justify-content: center;
-  /* align-items: center; */
+  align-items: center;
   gap: 60px;
   padding: 21px;
   border: 2px solid hsl(235, 18%, 26%);
@@ -21,15 +20,13 @@ main {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -40%);
 }
 
 main .container {
-  /* padding: 29px 0 0 29px; */
   padding-top: 29px;
   margin-left: 29px;
   width: 376px;
-  /* height: 446px; */
 }
 
 main .container .heading {
