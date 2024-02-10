@@ -1,13 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
-import Success from "./pages/Success";
+import Thanks from "./pages/thanks";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes path="/">
         <Route index element={<Home />} />
-        <Route path="success" element={<Success />} />
+        <Route path="success" element={<Thanks />} />
       </Routes>
     </BrowserRouter>
   );

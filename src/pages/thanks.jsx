@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import "./Success.css";
+import "./thanks.css";
 
-function Success() {
+function Thanks() {
   return (
     <div className="success">
       <svg
@@ -27,4 +27,4 @@ function Success() {
   );
 }
 
-export default Success;
+export default Thanks;
