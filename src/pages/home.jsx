@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Home.css";
+import "./home.css";
 import isEmail from "validator/lib/isEmail";
 import { useNavigate } from "react-router-dom";
 
